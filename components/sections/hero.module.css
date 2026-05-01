@@ -1,0 +1,20 @@
+.discussButton {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #eafff3;
+    /* border: 3px linear-gradient(#79DCA8, #0E5738); */
+
+    /* Base gradient */
+    background: linear-gradient(#447444, #0E5738);
+    box-shadow:
+        inset 1 3px 1px rgba(255, 255, 255, 0.4),
+        inset 1 2px 1px rgba(0, 0, 0, 0.4);
+
+}
+
+.btnGroup span {
+    font-size: large;
+    margin-left: 5px;
+}
