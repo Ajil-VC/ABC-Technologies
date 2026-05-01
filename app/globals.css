@@ -14,6 +14,10 @@
 
   --gradient-dark: #141517;
   --dark-blue: #283F5C;
+
+
+  --glass-bg: #8b8b8b0c;
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
 
 @font-face {
@@ -44,4 +48,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 20px;
 
+}
+
+.letterSpacing {
+  letter-spacing: 1px;
 }
