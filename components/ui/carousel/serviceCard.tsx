@@ -5,7 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 export function ServiceCard({ item }: { item: CardType }) {
     return (
-        <div className={`${style.cardStyle} min-w-[320px] max-w-[380px] min-h-[360px] bg-[#0f1a16] border border-green-900 rounded-xl p-6 text-white backdrop-blur-md flex flex-col`}>
+        <div style={{ background: 'rgba(0, 41, 14, 0.17)' }} className={`${style.cardStyle} min-w-[320px] max-w-[380px] min-h-[360px] border border-white/10 rounded-xl p-6 text-white backdrop-blur-md flex flex-col`}>
 
             <div className="mb-4 flex justify-end">
                 <img
@@ -22,7 +22,7 @@ export function ServiceCard({ item }: { item: CardType }) {
             </p>
 
             <div className="mt-auto">
-                <button className="w-full border border-green-600 rounded-lg py-2 text-sm hover:bg-green-700 transition flex justify-center items-center gap-2">
+                <button className="w-full border border-white/30 rounded-lg py-2 text-sm transition flex justify-center items-center gap-2 hover:bg-[var(--button-green)]">
                     Learn More <FiArrowUpRight />
                 </button>
             </div>

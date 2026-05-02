@@ -135,7 +135,19 @@ circle at 35% 50%,
                             Our expertise spans across critical sectors, delivering tailored solutions that drive efficiency and sustainability.
                         </p>
                     </div>
-                    <div className={style.sectionMargin}>
+                    <div className={`relative ${style.sectionMargin}`}>
+                        <div className="absolute right-0 flex justify-center items-center pointer-events-none">
+                            <div className="w-[300px] h-[120px] md:w-[500px] md:h-[200px] 
+        bg-[radial-gradient(ellipse,var(--gradient-bright-green),transparent_50%)] 
+        blur-3xl opacity-60">
+                            </div>
+                        </div>
+                        <div className="absolute left-60 flex justify-center items-center pointer-events-none">
+                            <div className="w-[300px] h-[120px] md:w-[500px] md:h-[200px] 
+        bg-[radial-gradient(ellipse,var(--gradient-bright-green),transparent_50%)] 
+        blur-3xl opacity-60">
+                            </div>
+                        </div>
                         <Carousel align="center">
                             {sectoreData.map((item, i) => (
                                 <SectorCard key={`sector-${i}`} item={{ ...item, number: i + 1 }} />
