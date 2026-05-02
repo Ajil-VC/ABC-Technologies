@@ -1,11 +1,14 @@
 "use client";
 import { useRef } from "react";
 import { ServiceCard } from "./serviceCard";
-import { ServiceType } from "@/types/type";
+import { CardType } from "@/types/type";
 import style from '../ui.module.css';
-import SectorCard from "../sector/sectorCard";
+import SectorCard from "./sectorCard";
 
-export default function ServiceCarousel({ items }: { items: ServiceType[] }) {
+export default function Carousel({ children, align = 'start' }: {
+    children: React.ReactNode;
+    align?: "center" | "start";
+}) {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const scroll = (dir: "left" | "right") => {
@@ -35,15 +38,13 @@ export default function ServiceCarousel({ items }: { items: ServiceType[] }) {
             >
                 ▶
             </button>
-
+        
             {/* Scroll container */}
             <div
                 ref={scrollRef}
-                className={`flex gap-6 overflow-x-auto scroll-smooth px-10 ${style.noScrollbar}`}
-            >
-                {items.map((item, i) => (
-                    <ServiceCard key={i} item={item} />
-                ))}
+                className={`flex ${align === "center" ? "justify-center" : "justify-start"
+                    } gap-6 overflow-x-auto scroll-smooth px-10 ${style.noScrollbar}`}>
+                {children}
             </div>
         </div>
     );

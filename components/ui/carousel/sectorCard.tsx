@@ -1,20 +1,14 @@
-"use client";
-import { ServiceType } from "@/types/type";
+
+import { CardType } from "@/types/type";
 import style from '../ui.module.css';
-import { useState } from "react";
 
-export default function SectorCard({
-    number = "01",
-    title = "Power & Energy",
-    description = "Advanced Solutions For Power Generation, Distribution, And Energy Optimization",
-
-}) {
+export default function SectorCard({ item }: { item: CardType }) {
 
     return (
         <div className={`${style.cardStyle} ${style.sectorCard}`}>
 
             <div className={style.sectorNumber}>
-                {number}
+                {item.number}
             </div>
 
 
@@ -26,9 +20,9 @@ export default function SectorCard({
                     fontWeight: "700",
                     lineHeight: "1.3",
                     letterSpacing: "-0.01em",
-                }}
+                }} 
             >
-                {title}
+                {item.title}
             </h3>
 
 
@@ -42,7 +36,7 @@ export default function SectorCard({
                     textAlign: "center",
                 }}
             >
-                {description}
+                {item.description}
             </p>
         </div>
     );

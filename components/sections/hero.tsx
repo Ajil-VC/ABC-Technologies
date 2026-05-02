@@ -1,7 +1,7 @@
 "use client";
 import Container from "../ui/container";
 import StrokeButton from "../ui/strokeButton";
-import style from './hero.module.css';
+import style from './section.module.css';
 
 export default function Hero() {
 
@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         <section className="relative w-full min-h-screen bg-[#0b0f14] overflow-hidden">
 
-            <div className="relative z-20 max-w-7xl mx-auto px-4 min-h-screen flex items-center">
+            <div className="relative z-40 max-w-7xl mx-auto px-4 min-h-screen flex items-center">
                 <Container>
 
                     <div className="max-w-3xl">
@@ -35,7 +35,7 @@ export default function Hero() {
 
             </div>
 
-            <div className="absolute inset-0 z-10"
+            <div className="absolute inset-0 z-30"
                 style={{
                     background: `
        radial-gradient(
@@ -48,7 +48,7 @@ circle at 85% 50%,
                 }} />
 
 
-            <div className="absolute right-0 top-0 h-full w-[60%] ">
+            <div className="absolute right-0 top-0 h-full w-[60%] z-20">
                 <img
                     src="/images/hero.png"
                     className="h-full w-full object-cover object-right scale-120 origin-right"

@@ -1,0 +1,53 @@
+.discussButton {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #eafff3;
+    /* border: 3px linear-gradient(#79DCA8, #0E5738); */
+
+    /* Base gradient */
+    background: linear-gradient(#447444, #0E5738);
+    box-shadow:
+        inset 1 3px 1px rgba(255, 255, 255, 0.4),
+        inset 1 2px 1px rgba(0, 0, 0, 0.4);
+
+}
+
+.btnGroup span {
+    font-size: large;
+    margin-left: 5px;
+}
+
+.sectionMargin {
+    margin-top: 50px;
+}
+
+
+.outlookCard {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px 22px 20px;
+    background: linear-gradient(180deg, #283f5c3b 0%, #4475443d 50%, #14151736 100%);
+
+    border: 1px solid rgba(45, 200, 120, 0.25);
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+
+
+    backdrop-filter: blur(250px);
+    -webkit-backdrop-filter: blur(250px);
+}
+
+.outlookCard::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(45, 200, 120, 0.5), transparent);
+}
+

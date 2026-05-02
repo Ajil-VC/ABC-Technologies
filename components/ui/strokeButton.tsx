@@ -1,4 +1,4 @@
-
+import { jakarta } from "@/lib/fonts";
 
 type Props = {
     children: React.ReactNode;
@@ -8,7 +8,7 @@ type Props = {
 export default function StrokeButton({ children, onClick }: Props) {
 
     return (
-        <button onClick={onClick} style={{ borderColor: "var(--text-green)", cursor: "pointer" }} className={` border border-black px-6 py-2 rounded-md hover:bg-black hover:text-white transition `}>
+        <button onClick={onClick} style={{ borderColor: "var(--text-green)", cursor: "pointer" }} className={`${jakarta.className} border border-black px-6 py-2 rounded-md hover:bg-black hover:text-white transition `}>
             {children}
         </button>
     )
